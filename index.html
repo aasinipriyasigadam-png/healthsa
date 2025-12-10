@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Premium HealthCare Advisor</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C9.8 2 8 3.8 8 6c0 2.2 4 7 4 7s4-4.8 4-7c0-2.2-1.8-4-4-4zM4 20a8 8 0 0116 0H4z"/></svg>
+        <span>HealthCare Premium</span>
+      </div>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#plan">Plans</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <h1>Personalised Nutrition & Habits</h1>
+            <p>Answer a few quick questions and get a tailored diet plan, daily habits, and wellness tips — instantly.</p>
+            <div class="cta-row">
+              <a href="#form" class="btn btn-primary">Get Started</a>
+              <a href="#features" class="btn btn-ghost">Learn More</a>
+            </div>
+          </div>
+
+          <form id="healthForm" class="card form" autocomplete="off" aria-labelledby="formHeading">
+            <h2 id="formHeading">Tell us about yourself</h2>
+
+            <div class="row">
+              <label class="field">
+                <span>Name</span>
+                <input type="text" id="name" placeholder="Your name" />
+              </label>
+              <label class="field">
+                <span>Age</span>
+                <input type="number" id="age" min="5" max="120" placeholder="30" />
+              </label>
+            </div>
+
+            <div class="row">
+              <label class="field">
+                <span>Gender</span>
+                <select id="gender">
+                  <option value="any">Prefer not to say</option>
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                  <option value="other">Other</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Activity level</span>
+                <select id="activity">
+                  <option value="sedentary">Sedentary</option>
+                  <option value="light">Light</option>
+                  <option value="moderate">Moderate</option>
+                  <option value="active">Active</option>
+                  <option value="very">Very active</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="row">
+              <label class="field">
+                <span>Weight (kg)</span>
+                <input type="number" id="weight" min="20" max="300" step="0.1" />
+              </label>
+              <label class="field">
+                <span>Height (cm)</span>
+                <input type="number" id="height" min="80" max="250" step="0.1" />
+              </label>
+            </div>
+
+            <div class="row">
+              <label class="field">
+                <span>Diet preference</span>
+                <select id="dietPref">
+                  <option value="balanced">Balanced</option>
+                  <option value="vegetarian">Vegetarian</option>
+                  <option value="vegan">Vegan</option>
+                  <option value="lowcarb">Low-carb</option>
+                  <option value="keto">Keto</option>
+                  <option value="pescatarian">Pescatarian</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Main goal</span>
+                <select id="goal">
+                  <option value="maintain">Maintain weight</option>
+                  <option value="lose">Lose weight</option>
+                  <option value="gain">Gain muscle/weight</option>
+                  <option value="betterHabits">Improve habits</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary full">Get Recommendations</button>
+              <button type="button" id="resetBtn" class="btn btn-light">Reset</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="feature-grid">
+          <article class="feature">
+            <h3>Personalised plans</h3>
+            <p>Simple, actionable meal and habit guidance tailored to your inputs.</p>
+          </article>
+          <article class="feature">
+            <h3>Trusted guidance</h3>
+            <p>Practical tips that align with general evidence-based recommendations.</p>
+          </article>
+          <article class="feature">
+            <h3>Privacy-first</h3>
+            <p>All processing happens in your browser — nothing is sent to servers.</p>
+          </article>
+        </div>
+      </section>
+
+      <aside id="result" class="result card visually-hidden" aria-live="polite"></aside>
+
+      <section id="plan" class="plan">
+        <h2>Upgrade to Premium</h2>
+        <p class="muted">Want weekly meal plans, printable shopping lists and progress tracking? Contact us.</p>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer">
+      <div>© <strong>HealthCare Premium</strong> — Not a substitute for professional medical advice.</div>
+      <small class="muted">Background images from Unsplash</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
